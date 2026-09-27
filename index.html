@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediThread — AI-Enabled Health Memory Timeline Platform</title>
+  <meta name="description" content="Own, structure, and visualize lifelong health data. Ingest clinical records with OCR, detect preventive care gaps, and generate multi-context AI summaries.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            clinical: {
+              950: '#0B1120',
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+              600: '#475569'
+            },
+            medical: {
+              cyan: '#0EA5E9',
+              emerald: '#10B981',
+              amber: '#F59E0B',
+              rose: '#EF4444',
+              purple: '#8B5CF6'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Application Custom Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body class="bg-[#0B1120] text-slate-100 min-h-screen selection:bg-sky-500/30 selection:text-sky-200">
+  
+  <!-- Single Page App Mount Point -->
+  <div id="app-root">
+    <!-- Initial Preloader before JS modules mount -->
+    <div class="min-h-screen flex flex-col items-center justify-center bg-[#0B1120]">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-500 to-emerald-400 flex items-center justify-center animate-bounce shadow-lg shadow-sky-500/30">
+        <svg class="w-6 h-6 text-slate-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 15c6.667-6 13.333 0 20-6"></path>
+          <path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path>
+          <path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path>
+          <path d="M17 6l3-3"></path>
+          <path d="M4 21l3-3"></path>
+        </svg>
+      </div>
+      <div class="mt-4 text-xs font-bold text-sky-400 tracking-wider uppercase">Loading MediThread...</div>
+    </div>
+  </div>
+
+  <!-- Main ES Module Application Script -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
